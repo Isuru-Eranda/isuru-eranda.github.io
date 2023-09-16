@@ -14,7 +14,7 @@
 
 <body>
 
-    <!--------Header Section-------->
+    <!-------- Header -------->
     <div id="header">
         <img class="intro-img" src="Images/photo-intro.jpg">
         <nav>
@@ -39,7 +39,7 @@
 
     </div>
 
-    <!--------about Section-------->
+    <!-------- about -------->
 
     <div id="about">
         <div class="container">
@@ -58,14 +58,71 @@
                         I am committed to using my skills and expertise to create innovative
                         and effective solutions for my clients.
                     </p>
-                 <div class="tab-titles">
-                   <p class="tab-links">Skills</p> 
-                   <p class="tab-links">Experience</p> 
-                   <p class="tab-links">Education</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('special milestones')">Special Milestones</p>
+                        <p class="tab-links"onclick="opentab('experience')">Experience </p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>UI/UX Design</span><br>Designing Web/App interfaces</li>
+                            <li><span>App Development</span><br>Building Android & iOS apps</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="special milestones">
+                        <ul>
+                            <li><span>2023</span><br>Undergraduate BSc (Hons) in Software Engineering</li>
+                            <li><span>2023</span><br>G.C.E. (A/L) Examination</li>
+                            <li><span>2022</span><br>President's Scout Award</li>
+                            <li><span>2019</span><br>G.C.E. (O/L) Examination</li>
+                            <li><span>2013</span><br> Scholarship Examination (Grade 05)</li>
+                            <li><span>2003</span><br>Birth</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Content Creator</span><br>Content Creating for YouTube & Social Media.</li>
+                            <li><span>Cryptocurrency Trader</span><br>Trading Cryptocurrency using Binance platform</li>
+                        </ul>
+                    </div>
                 </div>
-                 </div>
             </div>
 
+        </div>
+    </div>
+
+
+
+<!----------- Contact ------------->
+<div id="Contact">
+    <div class="container">
+        <div class="row">
+
+            <div class="Contact-left">
+                <h1 class="Sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>isurueranda01@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>0787009632</p>
+
+                <div class="social-icons">
+                    <a href="https://web.facebook.com/KVPISURUERANDA/"><img src="icon/facebook.png"></a>
+                    <a href="https://twitter.com/isuru__eranda"><img src="icon/twitter.png"></a>
+                    <a href="https://github.com/Isuru-Eranda"><img src="icon/github.png"></a>
+                    <a href="https://www.linkedin.com/in/isuru-eranda/"><img src="icon/linkedin.png"></a>
+                </div>
+
+            </div>
+            <div class="Contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required >
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </div>
 
 
@@ -73,20 +130,7 @@
 
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
 
 
 
@@ -136,7 +180,21 @@
     </footer>
 
 
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
 
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
 
 
 </body>
