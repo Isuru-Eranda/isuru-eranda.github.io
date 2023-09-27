@@ -184,7 +184,10 @@ nav ul li a:hover::after {
     flex-basis: 60%;
 
 }
-
+.Contact-left p{
+    margin-top: 30px;
+    
+}
 
 
 
