@@ -211,6 +211,17 @@ nav ul li a:hover::after {
     transform: translateY(-5px);
 
 }
+.btn{
+    display: inline-block;
+    border: 1px solid #f01008;
+    padding: 14px 50px;
+    border-radius: 6px;
+    margin: 50px auto;
+    width: fit-content;
+    background: #f01008;
+    color: white;
+    text-decoration: none;
+}
 
 
 
