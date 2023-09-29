@@ -189,6 +189,11 @@ nav ul li a:hover::after {
     
 }
 
+.Contact-left p i{
+    color: #f01008;
+    margin-right: 15px;
+    font-size: 25px;
+}
 
 
 
