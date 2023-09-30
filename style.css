@@ -92,55 +92,57 @@ nav ul li a:hover::after {
 
 /*--------about Section--------*/
 
-#about{
+#about {
     padding: 80px 0;
     color: #ababab;
 }
 
-#about img{
+#about img {
     width: 350px;
     height: 450px;
 }
 
-.row{
+.row {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.about-col-1{
+.about-col-1 {
     flex-basis: 35%;
 
 }
 
-.about-col-1 img{
+.about-col-1 img {
     width: 100%;
     border-radius: 15px;
 }
 
-.about-col-2{
+.about-col-2 {
     flex-basis: 63%;
 }
 
-.sub-title{
+.sub-title {
     font-size: 45px;
     color: white;
 }
 
-.tab-titles{
+.tab-titles {
     display: flex;
     margin: 20px 0 40px;
 
 }
-.tab-links{
+
+.tab-links {
     margin-right: 50px;
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
     position: relative;
-    
+
 }
-.tab-links::after{
+
+.tab-links::after {
     content: '';
     width: 0;
     height: 3px;
@@ -151,54 +153,58 @@ nav ul li a:hover::after {
     transition: 0.5s;
 }
 
-.tab-links.active-link::after{
+.tab-links.active-link::after {
     width: 50%;
 }
 
-.tab-contents ul li{
+.tab-contents ul li {
     list-style: none;
     margin: 10px 0;
 }
 
-.tab-contents ul li span{
+.tab-contents ul li span {
     color: #f01008;
     font-size: 14px;
     font-weight: bold;
 }
 
-.tab-contents{
+.tab-contents {
     display: none;
 
-} 
-.tab-contents.active-tab{
+}
+
+.tab-contents.active-tab {
     display: block;
 }
 
 
 /*--------------Contact---------------*/
 
-.Contact-left{
+.Contact-left {
     flex-basis: 35%;
 }
-.Contact-right{
+
+.Contact-right {
     flex-basis: 60%;
 
 }
-.Contact-left p{
+
+.Contact-left p {
     margin-top: 30px;
-    
+
 }
 
-.Contact-left p i{
+.Contact-left p i {
     color: #f01008;
     margin-right: 15px;
     font-size: 25px;
 }
 
-.social-icons{
+.social-icons {
     margin-top: 30px;
 }
-.social-icons a{
+
+.social-icons a {
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
@@ -206,12 +212,14 @@ nav ul li a:hover::after {
     display: inline-block;
     transition: transfrom 0.5s;
 }
-.social-icons a:hover{
+
+.social-icons a:hover {
     color: #f01008;
     transform: translateY(-5px);
 
 }
-.btn{
+
+.btn {
     display: inline-block;
     border: 1px solid #f01008;
     padding: 14px 50px;
@@ -222,10 +230,13 @@ nav ul li a:hover::after {
     color: white;
     text-decoration: none;
 }
-.Contact-right form{
+
+.Contact-right form {
     width: 100%;
 }
-form input, textarea{
+
+form input,
+textarea {
     width: 100%;
     border: 0;
     outline: none;
@@ -237,26 +248,13 @@ form input, textarea{
     border-radius: 6px;
 }
 
+form .btn2 {
+    padding: 14px 50px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 .copyright {
     width: 100%;
@@ -264,5 +262,46 @@ form input, textarea{
     padding: 15px 0;
     background: #262627;
     margin-top: 18px;
+}
+
+/*---------------- css for small screen ------------------*/
+
+nav .fas {
+    display: none;
+}
+
+@media only screen and (max-width:600px) {
+    .heder-text {
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .heder-text h1 {
+        font-size: 30px;
+    }
+    nav .fas {
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #f01008;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+    }
+    nav ul li {
+       display: block;
+       margin: 25px;
+    }
+    nav ul .fas {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
 
 }
