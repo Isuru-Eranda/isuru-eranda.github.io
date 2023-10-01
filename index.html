@@ -20,7 +20,7 @@
     <div id="header">
         
         <nav>
-            <ul>
+            <ul id="sidemenu">
                 <li><a href="#">HOME</a></li>
                 <li><a href="#">ABOUT ME</a></li>
                 <li><a href="#">SKILLS</a></li>
@@ -144,46 +144,7 @@
 
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!----------- footer ------------->
     <footer>
 
         <div class="copyright">
@@ -191,6 +152,11 @@
         </div>
     </footer>
 
+
+
+
+
+<!----------- Javascript Section ------------->
 
 <script>
     var tablinks = document.getElementsByClassName("tab-links");
@@ -208,6 +174,18 @@
     }
 </script>
 
+<script>
+    var sidemenu = document.getElementById("sidemenu")
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+     function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+
+</script>
 
 </body>
 
