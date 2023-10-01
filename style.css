@@ -292,6 +292,7 @@ nav .fas {
         height: 100vh;
         padding-top: 50px;
         z-index: 2;
+        transition: right 0.5s;
     }
     nav ul li {
        display: block;
@@ -303,5 +304,16 @@ nav .fas {
         left: 25px;
         cursor: pointer;
     }
-
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+         flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 40px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
 }
