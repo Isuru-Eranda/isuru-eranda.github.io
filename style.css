@@ -4,6 +4,9 @@
     font-family: 'popins', sans-serif;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body {
 
@@ -316,4 +319,17 @@ nav .fas {
     .about-col-2{
         font-size: 14px;
     }
+    .Contact-left, .Contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
+
+
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
 }
