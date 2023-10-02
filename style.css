@@ -270,11 +270,16 @@ form .btn2 {
 
 /*---------------- css for small screen ------------------*/
 
-nav .fas {
+nav .fa-solid {
     display: none;
 }
 
 @media only screen and (max-width:600px) {
+
+    .intro-img{
+        margin-top: -40px;
+        margin-right: 25px;
+    }
     .heder-text {
         margin-top: 100%;
         font-size: 16px;
@@ -283,7 +288,7 @@ nav .fas {
     .heder-text h1 {
         font-size: 30px;
     }
-    nav .fas {
+    nav .fa-solid {
         display: block;
         font-size: 25px;
     }
@@ -302,7 +307,7 @@ nav .fas {
        display: block;
        margin: 25px;
     }
-    nav ul .fas {
+    nav ul .fa-solid{
         position: absolute;
         top: 25px;
         left: 25px;
