@@ -18,7 +18,7 @@
 
     <!-------- Header -------->
     <div id="header">
-        
+
         <nav>
             <ul id="sidemenu">
                 <li><a href="#header">HOME</a></li>
@@ -37,14 +37,14 @@
             <div class="heder-text">
                 <p>Content Creator</p>
                 <h1>Hi, I am <span>Isuru Eranda,</span><br>From Sri Lanka.</h1> <br>
-           
-                 <p>
-                - 🌱 I’m currently learning Software Engineering . <br><br>
 
-                - 💬 Ask me about Anything You want to know .<br><br>
+                <p>
+                    - 🌱 I’m currently learning Software Engineering . <br><br>
 
-                - 📫 How to reach me :- isurueranda01@gmail.com
-                 </p>
+                    - 💬 Ask me about Anything You want to know .<br><br>
+
+                    - 📫 How to reach me :- isurueranda01@gmail.com
+                </p>
             </div>
 
         </div>
@@ -73,7 +73,7 @@
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('special milestones')">Special Milestones</p>
-                        <p class="tab-links"onclick="opentab('experience')">Experience </p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience </p>
                     </div>
 
                     <div class="tab-contents active-tab" id="skills">
@@ -107,50 +107,55 @@
         </div>
 
     </div>
- <!-------------------------------->
-<div class="p-skils" >
-  <h1>Programming Skills</h1> ,<br> 
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=react,vite,vue,angular,flutter,dart,kotlin,materialui,css,sass,tailwind,javascript,nodejs,typescript,python,mysql,mongodb,firebase,gcp,docker,kubernetes,azure,aws,cloudflare,netlify,heroku,postman,appwrite,atom,rust" />
-  </a>
-</div><br>
-<!----------- Contact ------------->
-<div id="Contact">
-    <div class="container">
-        <div class="row">
+    <!-------------------------------->
+    <div class="p-skils">
+        <h1>Programming Skills</h1> ,<br>
 
-            <div class="Contact-left">
-                <h1 class="Sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i>isurueranda01@gmail.com</p>
-                <p><i class="fa-solid fa-square-phone"></i>0787009632</p> &nbsp;
+        <a href="https://www.w3.org/html/">
+            <img src="icon/html-5.png" alt="html5" width="40" height="40" />
+        </a>
+        <a href="//www.w3schools.com/css/">
+            <img src="icon/css-3.png" alt="css3" width="40" height="40" />
+        </a>
 
-                <div class="social-icons">
-                    <a href="https://web.facebook.com/KVPISURUERANDA/"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://twitter.com/isuru__eranda"><i class="fa-brands fa-twitter-square"></i></a>
-                    <a href="https://github.com/Isuru-Eranda"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/isuru-eranda/"><i class="fa-brands fa-linkedin"></i></a>
+    </div><br>
+    <!----------- Contact ------------->
+    <div id="Contact">
+        <div class="container">
+            <div class="row">
+
+                <div class="Contact-left">
+                    <h1 class="Sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>isurueranda01@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>0787009632</p> &nbsp;
+
+                    <div class="social-icons">
+                        <a href="https://web.facebook.com/KVPISURUERANDA/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com/isuru__eranda"><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href="https://github.com/Isuru-Eranda"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/isuru-eranda/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="File/My Cv.pdf" download class="btn">Download Cv</a>
                 </div>
-               <a href="File/My Cv.pdf" download class="btn">Download Cv</a>
+                <div class="Contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
             </div>
-            <div class="Contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="Email" placeholder="Your Email" required >
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg"></span>
-            </div>
+
+
+
+
         </div>
-
-
-
 
     </div>
 
-</div>
-
-<!----------- footer ------------->
+    <!----------- footer ------------->
     <footer>
 
         <div class="copyright">
@@ -162,55 +167,55 @@
 
 
 
-<!----------- Javascript Section ------------->
+    <!----------- Javascript Section ------------->
 
-<script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
 
-    function opentab(tabname) {
-        for (tablink of tablinks) {
-            tablink.classList.remove("active-link");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
         }
-        for (tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab");
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+
+        function openmenu() {
+            sidemenu.style.right = "0";
         }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-</script>
-
-<script>
-    var sidemenu = document.getElementById("sidemenu")
-
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-     function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
 
 
-</script>
+    </script>
 
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbx25Rcs4AAA9ZM-SYWPrR2bfJT8KFE9RQ5zjzo9sqck-_yOLmct1WOnLoQscIR6K8nTQg/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById('msg')
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },5000)
-            form.reset()
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx25Rcs4AAA9ZM-SYWPrR2bfJT8KFE9RQ5zjzo9sqck-_yOLmct1WOnLoQscIR6K8nTQg/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById('msg')
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
         })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
+    </script>
 </body>
 
 </html>

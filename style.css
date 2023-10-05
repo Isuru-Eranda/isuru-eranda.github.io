@@ -329,6 +329,10 @@ nav .fa-solid {
     .about-col-1{
         margin-bottom: 40px;
     }
+    #about img {
+        width: 200px;
+        height: 275px;
+    }
     .about-col-2{
         font-size: 14px;
     }
@@ -337,6 +341,13 @@ nav .fa-solid {
     }
     .copyright{
         font-size: 14px;
+    }
+    .p-skils h1{
+        flex-basis: 100%;
+       
+    }
+    .p-skils a{
+        flex-basis: 100%;
     }
 }
 
