@@ -182,8 +182,12 @@ nav ul li a:hover::after {
 }
 /*------------------------------------*/
 .p-skils h1{
+    margin-left: 500px;
+   
+}
+.p-skils a{
 
-    margin-left: 100px;
+    margin-left: 250px;
 }
 /*--------------Contact---------------*/
 
