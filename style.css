@@ -180,8 +180,11 @@ nav ul li a:hover::after {
 .tab-contents.active-tab {
     display: block;
 }
+/*------------------------------------*/
+.p-skils h1{
 
-
+    margin-left: 100px;
+}
 /*--------------Contact---------------*/
 
 .Contact-left {
