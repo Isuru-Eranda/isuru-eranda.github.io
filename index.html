@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Isuru Eranda</title>
 
@@ -16,55 +16,55 @@
 
 <body>
 
-        <!--------------- Navigation bar ------------------>
+    <!--------------- Navigation bar ------------------>
 
-        <div id="header"  >
+        <nav class="navbar">
+
+            <ul id="sidemenu">
+
+                <li><a href="#header">HOME</a></li>
+                <li><a href="#about">ABOUT ME</a></li>
+                <li><a href="#">SKILLS</a></li>
+                <li><a href="#">MILESTONES</a></li>
+                <li><a href="#">PROJECTS</a></li>
+                <li><a href="#Contact">CONTACT</a></li>
+
+                <i class="fa-solid fa-times" onclick="closemenu()"></i>
+            </ul>
+
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+
+    <!-------------------- Intro ----------------------->
+
+    <div id="header">
        
-        <div class="topbar">
-            <nav>
-				
-                <ul id="sidemenu">
-					
-                    <li><a href="#header">HOME</a></li>
-                    <li><a href="#about">ABOUT ME</a></li>
-                    <li><a href="#">SKILLS</a></li>
-                    <li><a href="#">MILESTONES</a></li>
-                    <li><a href="#">PROJECTS</a></li>
-                    <li><a href="#Contact">CONTACT</a></li>
-					
-                    <i class="fa-solid fa-times" onclick="closemenu()"></i>
-                </ul>
-				
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-        </div>
+        <div class="container">
+            
+        <img class="intro-img" src="Images/photo-intro.jpg">
 
-        <!-------------------- Intro ----------------------->
+            <div class="heder-text">
+                <p>Content Creator</p>
+                <h1>Hi, I am <span>Isuru Eranda,</span><br>From Sri Lanka.</h1> <br>
 
-            <img class="intro-img" src="Images/photo-intro.jpg">
-            <div class="container">
+                <p>
+                    - 🌱 I’m currently learning Software Engineering . <br><br>
 
-                <div class="heder-text">
-                    <p>Content Creator</p>
-                    <h1>Hi, I am <span>Isuru Eranda,</span><br>From Sri Lanka.</h1> <br>
+                    - 💬 Ask me about Anything You want to know .<br><br>
 
-                    <p>
-                        - 🌱 I’m currently learning Software Engineering . <br><br>
-
-                        - 💬 Ask me about Anything You want to know .<br><br>
-
-                        - 📫 How to reach me :- isurueranda01@gmail.com
-                    </p>
-                </div>
-
+                    - 📫 How to reach me :- isurueranda01@gmail.com
+                </p>
             </div>
+
         </div>
-       
+    </div>
 
-        <!-------- about -------->
 
-        <div id="about" >
+    <!-------------------- about ---------------------->
 
+    <div class="container">
+
+        <divid="about">
             <div class="row">
 
                 <div class="about-col-1">
@@ -113,14 +113,13 @@
                     </div>
                 </div>
             </div>
+    </div>
+    </div>
 
+    <!----------------- Contact ------------------>
 
-
-        </div>
-
-        <!----------- Contact ------------->
-        <div class="container">
-          <div id="Contact">
+    <div class="container">
+        <div id="Contact">
 
             <div class="row">
 
@@ -148,23 +147,23 @@
                 </div>
             </div>
 
-          </div>
         </div>
+    </div>
 
 
 
-        <!----------- footer ------------->
+    <!----------- footer ------------->
 
-        <footer>
+    <footer>
 
-            <div class="copyright">
-                <p>Copyright &copy; Isuru Eranda | All rights reserved.</p>
-            </div>
-        </footer>
+        <div class="copyright">
+            <p>Copyright &copy; Isuru Eranda | All rights reserved.</p>
+        </div>
+    </footer>
 
-  
 
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 
 </body>
 
