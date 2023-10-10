@@ -28,7 +28,7 @@ body {
     justify-content: center;
     width: 100%;
     margin: 0 auto;
-    padding: 6px 0;
+    padding: 5px 0;
     background-color: #222222;
     box-shadow: 0 0px 4px 0px rgba(0, 0, 0, 0.8);
 }
@@ -92,10 +92,11 @@ nav ul li {
     padding: 60px;
     margin-top: 50px;
     margin-right: 35px;
+    border-radius: 5px;
 }
 
 .heder-text p {
-    margin-top: 88px;
+    margin-top: 100px;
     font-size: 23px;
     font-family: "Raleway";
 }
