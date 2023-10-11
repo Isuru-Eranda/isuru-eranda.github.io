@@ -117,7 +117,7 @@ nav ul li {
     color: red;
 }
 
-/*--------about Section--------*/
+/*--------About Section--------*/
 
 #about {
     padding: 80px 0;
@@ -280,7 +280,7 @@ form .btn2 {
     display: block;
 }
 
-/*-------------- Contact ---------------*/
+/*-------------- footer ---------------*/
 
 .copyright {
     width: 100%;
@@ -299,17 +299,17 @@ nav .fa-solid {
 
 @media only screen and (max-width:600px) {
 
-    .intro-img{
-        margin-top: -40px;
-        margin-right: 25px;
-    }
-    .heder-text {
-        margin-top: 100%;
-        font-size: 16px;
-    }
-
-    .heder-text h1 {
-        font-size: 30px;
+    /*-------- Navigation bar --------*/
+    .navbar {
+        text-align: center;
+        position: fixed; 
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px 0;
+        background-color: #222222;
+        box-shadow: 0 0px 4px 0px rgba(0, 0, 0, 0.8);
     }
     nav .fa-solid {
         display: block;
@@ -335,7 +335,26 @@ nav .fa-solid {
         top: 25px;
         left: 25px;
         cursor: pointer;
+
+    /*-------- Intro --------*/
+
+    .intro-img{
+        margin-top: -40px;
+        margin-right: 25px;
     }
+    .heder-text {
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .heder-text h1 {
+        font-size: 30px;
+    }
+   
+    }
+
+    /*--------About Section--------*/
+
     .sub-title{
         font-size: 40px;
     }
