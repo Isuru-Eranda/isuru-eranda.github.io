@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isuru Eranda</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/eb1fcbc67d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -27,7 +28,7 @@
             </div>
         </div>
     </div>
-    <!-------------- About---------->
+    <!-------------- About ------------->
     <div id="about">
         <div class="container">
             <div class="row">
@@ -74,16 +75,68 @@
         </div>
     </div>
 
-    <script>
-        var tablinks =  document.getElementsByClassName("tab-links")
-        var tabcontents =  document.getElementsByClassName("tab-contents")
+    <!-------------- services ------------->
 
-        function opentab(tabname){
-             for(tablink of tablinks){
-             tablink.classList.remove("active-link");
+    <div id="Services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>web Design</h2>
+                    <p>BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+                        BBBB
+                        BBBBBBBB
+                        BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+                        BBBBBBBBBB</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-sharp fa-solid fa-crop-simple"></i>
+                    <h2>Ux/UI Design</h2>
+                    <p>BBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+                        B
+                        BB
+                        BBBBBBBBBB
+                        BBBBBBBBBBBBBBBBBBBBBBBBBBBB
+                        B
+                        BBB
+                        BBBBBBBB</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h2>App Design</h2>
+                    <p>BBBBBBBBBBBBBBBBBBBBBBBBBBB
+                        BB
+                        BBBBBBBBBBBBB
+                        BBBBBBBBBBBBBBBBBBBBBBBBBBB
+                        BBBBBBBBBBBBB</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+     <!--------------  protfolio ------------->
+     <div id="protfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+
+        </div>
+     </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
             }
-            for(tabcontent of tabcontents){
-             tabcontent.classList.remove("active-tab");
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
             }
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab")
