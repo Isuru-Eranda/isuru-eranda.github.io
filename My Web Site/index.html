@@ -14,13 +14,15 @@
         <div class="container">
             <nav>
                 <img src="images/logo.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Services">Services</a></li>
+                    <li><a href="#protfolio">Portfolio</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>UI/UX Designer</p>
@@ -38,12 +40,12 @@
 
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-                        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-                        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-                        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-                        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
-
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed  nulla nibh,
+                    tincidunt sit amet sapien quis, element molwsite tellus. pellentesque
+                    habitain morbi trisitque senctus et neuts et malesuda fames ac tupisi
+                    egestas. MRUIS ELEMINT MAGEN ID ANTE CAOBLLIS MATTUS. quist in sem cm
+                    transseeque, dictemdj et, accysudn libaren.</p>
+                    
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links " onclick="opentab('experience')">Experience</p>
@@ -191,7 +193,7 @@
                 <div class="Contact-right">
                     <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="Email" placeholder="Your Email" required>
+                        <input type="Email" name="Email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
@@ -201,15 +203,15 @@
 
         </div>
     </div>
-    
-   <!----------- footer ------------->
 
-   <footer>
+    <!----------- footer ------------->
 
-    <div class="copyright">
-        <p>Copyright &copy; Isuru Eranda | All Rights Reserved.</p>
-    </div>
-</footer>
+    <footer>
+
+        <div class="copyright">
+            <p>Copyright &copy; Isuru Eranda | All Rights Reserved.</p>
+        </div>
+    </footer>
 
     <script>
         var tablinks = document.getElementsByClassName("tab-links")
@@ -225,6 +227,36 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab")
         }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx25Rcs4AAA9ZM-SYWPrR2bfJT8KFE9RQ5zjzo9sqck-_yOLmct1WOnLoQscIR6K8nTQg/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById('msg')
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
     </script>
 </body>
 
