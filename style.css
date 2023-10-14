@@ -97,22 +97,28 @@ nav ul li a:hover::after{
 .header-text h1 span{
      color: #f01008;
 }
-.intro-col-2 img{
-    width: 250px;
-    height: 350px;
-    margin-top: 120px;
-    margin-right: 35px;
-    border-radius: 5px;  
-}
 .intro-P {
-    margin-top: -130px;
-    text-shadow: 1px 1px #f01008;
+    margin-top: -150px;   
 }
 .intro-P h3{
+    text-shadow: 1px 1px #f01008;
     margin-left: 80px;
     font-family: "Raleway";
 }
-
+.intro-P p{
+    color: #ababaa;
+}
+.intro-col-2{
+    flex-basis: 35%;
+}
+.intro-col-2 img{
+    width: 70%;
+    /* width: 250px;
+     height: 350px;*/
+     margin-top: 120px;
+     margin-left: 30px;
+     border-radius: 5px;  
+ }
 /*-------------- About ----------*/
 
 #about{
@@ -430,20 +436,25 @@ nav .fa-solid{
         cursor: pointer;
     }
 /*------------ Intro -------------*/
+.intro-P {
+    margin-top: -210%;
+
+}
 
     .intro-col-2 img{
       /*  width: 300px;
         height: 3px;*/
-        margin-top: 100px;  
-    }
-    .intro-P {
-        margin-top: -155%;
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 170px; 
+        border-radius: 15px; 
+        
     }
     .intro-P h3{
         margin-left: 0px;
         font-size: 16px;
-    }
-    .intro-col-1, .intro-col-2{
+    } 
+    .intro-col-1,.intro-col-2{
         flex-basis: 100%;
     }
     .intro-col-2{
@@ -451,7 +462,7 @@ nav .fa-solid{
     }
 
 /*------------ About -------------*/
-
+    
     .sub-title{
         font-size: 40px;
     }
@@ -459,7 +470,7 @@ nav .fa-solid{
         flex-basis: 100%;
     }
     .about-col-1{
-        margin-top: 20%;
+        margin-top: 70%;
         margin-bottom: 30px;
     }
     .about-col-2{
