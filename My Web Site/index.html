@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isuru Eranda</title>
+    <link rel="icon" href="icon/favicon/android-chrome-512x512.png">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/eb1fcbc67d.js" crossorigin="anonymous"></script>
 </head>
@@ -13,21 +14,26 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/logo.png" class="logo">
+               <!---- <img src="images/logo.png" class="logo"> ----->
+
+                <!--------------- Navigation bar ------------------>
+
                 <ul id="sidemenu">
-                    <li><a href="#header">HOME</a></li>
-                    <li><a href="#about">ABOUT ME</a></li>
-                    <li><a href="#Services">SERVICES</a></li>
-                    <li><a href="#Services">SKILLS</a></li>
-                    <li><a href="#protfolio">PORTFOLIO</a></li>
-                    <li><a href="#Contact">CONTACT</a></li>
+                    
+                        <li><a href="#header">HOME</a></li>
+                        <li><a href="#about">ABOUT ME</a></li>
+                        <li><a href="#Services">SERVICES</a></li>
+                        <li><a href="#Services">SKILLS</a></li>
+                        <li><a href="#protfolio">PORTFOLIO</a></li>
+                        <li><a href="#Contact">CONTACT</a></li>
+                    
                     <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                <i  id="openmenu-icon" class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <p>UI/UX Designer</p>
-                <h1>Hi, I'm <span>Isuru </span><br> Eranda From Sri Lanka</h1>
+                <p>Content Creator</p>
+                <h1>Hi, I am <span>Isuru Eranda,</span><br>From Sri Lanka.</h1>
             </div>
         </div>
     </div>
@@ -217,7 +223,7 @@
         </div>
     </footer>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

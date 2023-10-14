@@ -23,35 +23,49 @@ body{
 .container{
     padding: 10px 10%;
 }
+
+/*-------- Navigation bar --------*/
+
 nav{
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;  
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px 0;
+    background: #262626;
+    box-shadow: 0 0px 4px 0px rgba(0, 0, 0, 0.8);
 }
+/*
 .logo{
     width: 140px;
 }
+*/
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 20px 15px;
 }
 nav ul li a{
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: bold;
     position: relative;
 }
 nav ul li a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background:#ff004f;
     position: absolute;
     left: 0;
     bottom: -6px;
     transition: 0.5s;
+}
+nav a:hover {
+    background:#f01008;
+    color:white;
 }
 nav ul li a:hover::after{
     width: 100%;
@@ -59,10 +73,13 @@ nav ul li a:hover::after{
 .header-text{
     margin-top: 20%;
     font-size: 30px;
+    font-family: "Raleway";
 }
+
 .header-text h1{
     font-size: 60px;
     margin-top: 20px;
+    font-family: "Raleway";
 }
 .header-text h1 span{
      color: #ff004f;
@@ -347,10 +364,14 @@ nav .fa-solid{
     .header-text h1{
         font-size: 30px;
     }
+    nav{
+        justify-content: right;
+    }
     nav .fa-solid{
         display: block;
         font-size: 25px;
     }
+    
     nav ul{
         background: #ff004f;
         position: fixed;
