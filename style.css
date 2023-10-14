@@ -432,10 +432,12 @@ nav .fa-solid{
 /*------------ Intro -------------*/
 
     .intro-col-2 img{
-        margin-top: 45px;  
+      /*  width: 300px;
+        height: 3px;*/
+        margin-top: 100px;  
     }
     .intro-P {
-        margin-top: -128%;
+        margin-top: -155%;
     }
     .intro-P h3{
         margin-left: 0px;
@@ -444,6 +446,10 @@ nav .fa-solid{
     .intro-col-1, .intro-col-2{
         flex-basis: 100%;
     }
+    .intro-col-2{
+        margin-bottom: 30px;
+    }
+
 /*------------ About -------------*/
 
     .sub-title{
@@ -453,6 +459,7 @@ nav .fa-solid{
         flex-basis: 100%;
     }
     .about-col-1{
+        margin-top: 20%;
         margin-bottom: 30px;
     }
     .about-col-2{
