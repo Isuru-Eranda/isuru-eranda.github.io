@@ -1,5 +1,5 @@
-var tablinks = document.getElementsByClassName("tab-links");
-var tabcontents = document.getElementsByClassName("tab-contents");
+var tablinks = document.getElementsByClassName("tab-links")
+var tabcontents = document.getElementsByClassName("tab-contents")
 
 function opentab(tabname) {
     for (tablink of tablinks) {
@@ -9,7 +9,7 @@ function opentab(tabname) {
         tabcontent.classList.remove("active-tab");
     }
     event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
+    document.getElementById(tabname).classList.add("active-tab")
 }
 
 
@@ -22,6 +22,7 @@ function openmenu() {
 function closemenu() {
     sidemenu.style.right = "-200px";
 }
+
 
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbx25Rcs4AAA9ZM-SYWPrR2bfJT8KFE9RQ5zjzo9sqck-_yOLmct1WOnLoQscIR6K8nTQg/exec'
