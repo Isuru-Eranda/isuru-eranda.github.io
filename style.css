@@ -160,7 +160,7 @@ nav ul li a:hover::after{
 content: '';
 width: 0;
 height: 3px;
-background: #ff004f;
+background: #f01008;
 position: absolute;
 left: 0;
 bottom: -9px;
@@ -188,9 +188,9 @@ transition: 0.5s;
 /*-------------- services -------------*/
 
 #Services{
-  padding: 30px 0;
-   
+  padding: 30px 0; 
 }
+
 .services-list{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
@@ -222,7 +222,7 @@ transition: 0.5s;
     display: inline-block;
 }
 .services-list div:hover{
-    background: #ff004f;
+    background: #f01008;
     transform: translateY(-10px);
 }
 
@@ -252,7 +252,7 @@ transition: 0.5s;
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    background: linear-gradient(rgba(0,0,0,0.6),#f01008);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -273,7 +273,7 @@ transition: 0.5s;
 }
 .layer a{
     margin-top: 20px;
-    color: #ff004f;
+    color: #f01008;
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
@@ -293,7 +293,7 @@ transition: 0.5s;
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #ff004f;
+    border: 1px solid #f01008;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -301,7 +301,7 @@ transition: 0.5s;
     transition: backgroun 0.5s;
 }
 .btn:hover{
-    background:#ff004f;
+    background:#f01008;
 }
 
 /*-------------- Contact ---------------*/
@@ -319,7 +319,7 @@ transition: 0.5s;
 }
 
 .Contact-left p i {
-    color: #ff004f;
+    color:#f01008;
     margin-right: 15px;
     font-size: 25px;
 }
@@ -381,9 +381,10 @@ form .btn2 {
 .copyright {
     width: 100%;
     text-align: center;
-    padding: 15px 0;
+    padding: 25px 0;
     background: #262627;
     margin-top: 18px;
+    box-shadow: 0 0px 4px 0px rgba(0, 0, 0, 0.8);
 }
 
 
@@ -415,7 +416,7 @@ nav .fa-solid{
     }
     
     nav ul{
-        background: #ff004f;
+        background: #f01008;
         position: fixed;
         top: 0;
         right: -200px;
