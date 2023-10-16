@@ -338,13 +338,13 @@ transition: 0.5s;
 }
 
 .social-icons a:hover {
-    color:#ff004f;
+    color:#f01008;
     transform: translateY(-5px);
 }
 
 .btn.btn2{
     display: inline-block;
-    background: #ff004f;
+    background:#f01008;
 
 }
 
