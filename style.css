@@ -118,6 +118,7 @@ nav ul li a:hover::after{
      margin-top: 120px;
      margin-left: 30px;
      border-radius: 5px;  
+     box-shadow: 0 0px 4px 0px rgba(247, 241, 241, 0.8);
  }
 /*-------------- About ----------*/
 
@@ -136,6 +137,7 @@ nav ul li a:hover::after{
 .about-col-1 img{
     width: 100%;
     border-radius: 15px;
+    box-shadow: 0 0px 4px 0px rgba(247, 241, 241, 0.8);
 }
 .about-col-2{
     flex-basis: 60%;
@@ -143,7 +145,10 @@ nav ul li a:hover::after{
 .sub-title{
     font-size: 60px;
     font-weight: 600;
-    color: white;
+    color: white; 
+}
+.about-col-2 h1{
+    margin-bottom: 10px;
 }
 .tab-titles{
     display: flex;
@@ -196,13 +201,17 @@ transition: 0.5s;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     grid-gap: 40px;
     margin-top: 50px;
+    
 }
+    
+
 .services-list div{
     background: #262626;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
     border-radius: 10px;
+    box-shadow: 0 0px 4px 0px rgba(247, 241, 241, 0.8);
     transition:  background 0.5s, transfrom 0.5s;
 }
 .services-list div i{
@@ -242,6 +251,7 @@ transition: 0.5s;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 0px 4px 0px rgba(247, 241, 241, 0.8);
 }
 .work img{
     width: 100%;
@@ -312,6 +322,9 @@ transition: 0.5s;
 
 .Contact-right {
     flex-basis: 60%;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
 }
 
 .Contact-left p {
@@ -356,12 +369,15 @@ form input,textarea {
     width: 100%;
     border: 0;
     outline: none;
-    background: #262626;
+    /*background: #313131;*/
     padding: 15px;
     margin: 15px 0;
-    color: #fff;
+    color: black;
+   /* color: #fff;*/
+    border-bottom: 2px solid #333;
+    outline: none;
     font-size: 18px;
-    border-radius: 6px;
+    /*border-radius: 6px;*/
 }
 
 form .btn2 {
@@ -375,6 +391,9 @@ form .btn2 {
     color: #61b752;
     margin-top: -40px;
     display: block;
+}
+#Contact{
+    margin-bottom: 30px;
 }
 /*-------------- footer ---------------*/
 .footer-col h3{
@@ -491,7 +510,7 @@ nav .fa-solid{
         flex-basis: 100%;
     }
     .about-col-1{
-        margin-top: 70%;
+        /*margin-top: 70%;*/
         margin-bottom: 30px;
     }
     .about-col-2{
@@ -511,9 +530,26 @@ nav .fa-solid{
     
 /*------------ footer -------------*/
 
+    .footer-col{
+    margin-bottom: 30px;
+    }
     .copyright{
         font-size: 14px;
         width: 100%;
+    }
+}
+
+/*@media(max-width:767px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}*/
+
+@media(max-width:375px){
+    .about-col-1{
+        margin-top: 70%;
+       
     }
 }
 
