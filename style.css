@@ -377,7 +377,27 @@ form .btn2 {
     display: block;
 }
 /*-------------- footer ---------------*/
-
+.footer-col h3{
+    margin-bottom: 12px;
+    position: relative;
+}
+.footer-col ul{
+    list-style: none;
+}
+.footer-col ul li{
+    margin-bottom: 6px;
+}
+.footer-col li a{
+    line-height: 1.5;
+    text-decoration: none;
+    color:#ababaa;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+    display: block;
+}
+.footer-col li a:hover{
+    color: #fff;
+}
 .copyright {
     width: 100%;
     text-align: center;
