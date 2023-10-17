@@ -547,9 +547,9 @@ nav .fa-solid{
     }
 }*/
 
-@media(max-width:375px){
+@media(max-width:356px){
     .about-col-1{
-        margin-top: 70%;
+        margin-top: 30%;
        
     }
 }
