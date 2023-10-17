@@ -547,10 +547,18 @@ nav .fa-solid{
     }
 }*/
 
-@media(max-width:356px){
+@media(max-width:375px){
     .about-col-1{
-        margin-top: 30%;
+        margin-top: 90%;
        
     }
+    .intro-P {
+        margin-bottom: 30px;
+    } 
+
+    .intro-col-2 img{ 
+          margin-top: 170px; 
+              
+      }
 }
 
