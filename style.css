@@ -314,7 +314,11 @@ transition: 0.5s;
 .btn:hover{
     background:#f01008;
 }
-
+/*--------------  Skills -------------*/
+.sub-title-2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 /*-------------- Contact ---------------*/
 
 .Contact-left {
