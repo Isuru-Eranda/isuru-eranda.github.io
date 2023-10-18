@@ -319,6 +319,35 @@ transition: 0.5s;
     margin-top: 10px;
     margin-bottom: 10px;
 }
+.skills -col{
+    display: grid;
+    grid-gap: 5px;
+}
+.skill-box{
+    padding: 1rem;
+    color: #ababab;
+    cursor: pointer;
+}
+.skill-title{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem; 
+}
+.skill-box img{
+    width: 90px;
+    height: 90px;
+    position: relative;
+    border-radius: 45px;
+    background-color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skill-icon{
+    width: 50px;
+}
+
 /*-------------- Contact ---------------*/
 
 .Contact-left {
