@@ -20,9 +20,7 @@ body{
 .container{
     padding: 10px 10%;
 }
-
 /*-------- Navigation bar --------*/
-
 nav{
     align-items: center;
     position: fixed;
@@ -119,7 +117,6 @@ nav ul li a:hover::after{
      box-shadow: 0 0px 4px 0px rgba(247, 241, 241, 0.8);
  }
 /*-------------- About ----------*/
-
 #about{
     padding: 18px 0;
     color: #ababaa;
