@@ -314,7 +314,7 @@ transition: 0.5s;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.skills -col{
+.skills-col{
     display: grid;
     grid-gap: 5px;
 }
@@ -330,11 +330,11 @@ transition: 0.5s;
     margin-bottom: 0.5rem; 
 }
 .skill-box img{
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     position: relative;
-    border-radius: 45px;
-    background-color:#fff;
+   /* border-radius: 45px;*/
+    background-color:none;
     display: flex;
     justify-content: center;
     align-items: center;
