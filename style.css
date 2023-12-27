@@ -326,8 +326,8 @@ transition: 0.5s;
     margin-bottom: 0.5rem; 
 }
 .skill-box img{
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     position: relative;
    /* border-radius: 45px;*/
     background-color:none;
