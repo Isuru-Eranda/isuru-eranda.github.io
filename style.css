@@ -191,16 +191,12 @@ transition: 0.5s;
 #Services{
   padding: 30px 0; 
 }
-
 .services-list{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     grid-gap: 40px;
-    margin-top: 50px;
-    
-}
-    
-
+    margin-top: 50px;  
+}    
 .services-list div{
     background: #262626;
     padding: 40px;
@@ -208,7 +204,7 @@ transition: 0.5s;
     font-weight: 300;
     border-radius: 10px;
     box-shadow: 0 0px 4px 0px rgba(247, 241, 241, 0.8);
-    transition:  background 0.5s, transfrom 0.5s;
+    transition: background 0.5s, transfrom 0.5s;
 }
 .services-list div i{
     font-size: 50px;
