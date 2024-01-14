@@ -571,5 +571,16 @@ nav .fa-solid{
     }
 }*/
 
+@media(max-width:360px){
+    .about-col-1{
+        margin-top: 35%;  
+    }
+    .intro-P{
+        margin-top: -219%;  
+    }
+    .intro-col-2{
+        margin-top: 25px;
+    }
 
+}
 
