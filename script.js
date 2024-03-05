@@ -14,8 +14,6 @@ function opentab(tabname) {
 
 
 
-var sidemenu = document.getElementById("sidemenu")
-
 function openmenu() {
     sidemenu.style.right = "0";
 }
