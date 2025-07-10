@@ -3,305 +3,584 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isuru Eranda</title>
-    <link rel="icon" href="icon/favicon/android-chrome-512x512.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#dc2626">
+    <title>Isuru Eranda - Software Engineer & UI/UX Designer | Portfolio</title>
+    <meta name="description" content="Isuru Eranda - Software Engineer and UI/UX Designer from Sri Lanka. Modern red & white themed portfolio showcasing web development, mobile apps, and user experience design.">
+    <meta name="keywords" content="Software Engineer, Web Developer, UI/UX Designer, React, Node.js, JavaScript, Sri Lanka">
+    <meta name="author" content="Isuru Eranda">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Isuru Eranda - Software Engineer & UI/UX Designer">
+    <meta property="og:description" content="Passionate Software Engineer creating innovative solutions and beautiful user experiences">
+    <meta property="og:image" content="Images/photo-intro.jpg">
+    <meta property="og:url" content="https://isuru-eranda.github.io">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Isuru Eranda - Software Engineer & UI/UX Designer">
+    <meta name="twitter:description" content="Passionate Software Engineer creating innovative solutions and beautiful user experiences">
+    <meta name="twitter:image" content="Images/photo-intro.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="icon/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon/favicon-16x16.png">
+    <link rel="manifest" href="icon/favicon/site.webmanifest">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/eb1fcbc67d.js" crossorigin="anonymous"></script>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Isuru Eranda",
+        "jobTitle": "Software Engineer",
+        "description": "Software Engineer and UI/UX Designer specializing in web development and user experience design",
+        "url": "https://isuru-eranda.github.io",
+        "sameAs": [
+            "https://github.com/Isuru-Eranda",
+            "https://www.linkedin.com/in/isuru-eranda/",
+            "https://twitter.com/isuru__eranda"
+        ],
+        "knowsAbout": ["JavaScript", "React", "Node.js", "UI/UX Design", "Web Development", "Mobile Development"],
+        "alumniOf": "NSBM Green University"
+    }
+    </script>
 </head>
 
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" title="Go to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
     <div id="header">
         
  <!--------------- Navigation bar ------------------>
         <nav>
+            <div class="nav-brand">
+                <a href="#header" class="logo-link" onclick="location.reload()">
+                    <div class="logo-text">IE</div>
+                </a>
+            </div>
             <ul id="sidemenu">
-
                 <li><a href="#header">HOME</a></li>
                 <li><a href="#about">ABOUT ME</a></li>
                 <li><a href="#Services">SERVICES</a></li>
-                <li><a href="#Services">SKILLS</a></li>
+                <li><a href="#skills">SKILLS</a></li>
                 <li><a href="#protfolio">PORTFOLIO</a></li>
                 <li><a href="#Contact">CONTACT</a></li>
-
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
-            <i id="openmenu-icon" class="fa-solid fa-bars" onclick="openmenu()"></i>
+            <div class="nav-controls">
+                <button id="theme-toggle" class="theme-toggle" title="Toggle theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <i id="openmenu-icon" class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </div>
         </nav>
 
      <!-------------------- Intro ----------------------->
-      <div id=" Intro">
-        <div class="container">
+      <div id="intro">
             <div class="row">
-
-                    <div class="intro-col-1">
-                        <div class="header-text">
-                            <p>Content Creator</p>
-                            <h1>Hi, I am <span>Isuru Eranda,</span><br>From Sri Lanka.</h1>
+                <div class="intro-col-1">
+                    <div class="header-text">
+                        <p class="greeting">Welcome to my portfolio!</p>
+                        <h1>Isuru <span class="highlight">Eranda</span></h1>
+                        <h2 class="typing-text">Experienced Front-End Developer</h2>
+                        <p class="description">
+                            Welcome to my portfolio! Isuru Eranda is an Experienced Front-End Developer with a passion for 
+                            creating visually stunning and intuitive web experiences. 
+                            With a unique blend of technical skills and creative flair,
+                            there's confidence in the ability to deliver custom solutions to various project requirements. 
+                            this add fist page intor about section
+                        </p>
+                        <div class="cta-buttons">
+                            <a href="#Contact" class="btn primary-btn">Get In Touch</a>
+                            <a href="Images/my-cv.pdf" download class="btn secondary-btn">
+                                <i class="fa-solid fa-download"></i> Download CV
+                            </a>
                         </div>
                     </div>
-
-                    <div class="intro-col-2"> <!---- * Special * ---->
-                        <img src="Images/photo-intro.jpg">
-                    </div>
-
                 </div>
-                <div class="intro-P">
-                    <h3>Welcome to My Portfolio </h3><br>
-                    <p>Hello, I'm Isuru Eranda, a content creater from Sri Lanka.Presently, <br>
-                        I am an undergraduate student at NSBM Green University and pursuing <br>
-                        BSc (Hons) in Software Engineering at Plymouth University (UK)</p>
+                <div class="intro-col-2">
+                    <div class="profile-image" style="margin-right: 15px;">
+                        <img src="Images/photo-intro.jpg" alt="Isuru Eranda">
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+            <div class="scroll-indicator">
+                <a href="#about" class="scroll-down">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+            </div>
+      </div>
+        
 
 <!-------------- About ------------->
 
     <div id="about">
-        <div class="container">
+
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/about image.jpg">
+                    <div class="about-image">
+                        <img src="Images/about image.jpg" alt="About Isuru Eranda">
+                    </div>
                 </div>
 
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-
-                    <p> Hi, I'm Isuru Eranda, a Content creator from Sri Lanka.
+                    <p class="about-description"> 
+                        Hi, I'm Isuru Eranda, a passionate Software Engineer from Sri Lanka.
                         I am currently an undergraduate at NSBM Green University,
                         where I am developing a solid foundation in software engineering
                         and a passion for building aesthetically attractive and intuitive
                         web experiences. With a strong track record of achievement,
                         I am committed to using my skills and expertise to create innovative
-                        and effective solutions for my clients.</p>
+                        and effective solutions that make a difference.
+                    </p>
+
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>2+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>100%</h3>
+                            <p>Client Satisfaction</p>
+                        </div>
+                    </div>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links " onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links " onclick="opentab('education')">Education</p>
+                        <p class="tab-links active-link" data-tab="about-skills">Skills</p>
+                        <p class="tab-links" data-tab="about-experience">Experience</p>
+                        <p class="tab-links" data-tab="about-education">Education</p>
                     </div>
-                    <div class="tab-contents active-tab" id="skills">
+                    <div class="tab-contents active-tab" id="about-skills">
                         <ul>
-                            <li><span>UI//UX</span><br>Designing Web App Interfaces</li>
-                            <li><span>Web Development</span><br> Application Development</li>
-                            <li><span>Digital content creator</span><br>Video & Photo Editing </li>
+                            <li><span>Frontend Development</span><br>React, Vue.js, HTML5, CSS3, JavaScript</li>
+                            <li><span>Backend Development</span><br>Node.js, Python, Express.js, MongoDB</li>
+                            <li><span>UI/UX Design</span><br>Figma, Adobe XD, Prototyping, User Research</li>
+                            <li><span>Mobile Development</span><br>React Native, Flutter, Cross-platform Apps</li>
                         </ul>
                     </div>
-                    <div class="tab-contents " id="experience">
+                    <div class="tab-contents" id="about-experience">
                         <ul>
-                            <li><span>Content Creator</span><br>Making videos for YouTube & Other Social Medias</li>
-                            <li><span>Cryptocurrency Trader</span><br>Cryptocurrency trading in Binance</li>
+                            <li><span>2023 - Present</span><br>Freelance Full-Stack Developer</li>
+                            <li><span>2022 - 2023</span><br>Content Creator & Digital Marketing</li>
+                            <li><span>2021 - 2022</span><br>Web Development Intern</li>
                         </ul>
                     </div>
-                    <div class="tab-contents" id="education">
+                    <div class="tab-contents" id="about-education">
                         <ul>
-                            <li><span> 2023 </span><br>Undergraduate BSc (Hons) in Software Engineering</li>
-                            <li><span> 2023 (2022)</span><br>G.C.E. (A/L) Examination</li>
-                            <li><span> 2019 </span><br>G.C.E. (O/L) Examination </li>
+                            <li><span>2023 - Present</span><br>BSc (Hons) Software Engineering - NSBM Green University</li>
+                            <li><span>2022</span><br>G.C.E. (A/L) Examination - Technology Stream</li>
+                            <li><span>2019</span><br>G.C.E. (O/L) Examination - 9 A's</li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
+        
     </div>
-
- <!-------------- services ------------->
 
     <div id="Services">
         <div class="container">
             <h1 class="sub-title">My Services</h1>
+            <p class="section-subtitle">What I offer to help bring your ideas to life</p>
             <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>web Design</h2>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h2>Web Development</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Quisquam quibusdam
-                        accusantium magnam tempore! Quisquam
-                        eius iure consequuntur eaque mollitia
-                        corrupti, odio placeat repellendus,
-                        minus dolore delectus aut iusto dignissimos.
-                        Repellat!
+                        Full-stack web development using modern technologies like React, Node.js, 
+                        and MongoDB. I create responsive, fast, and user-friendly websites that 
+                        deliver exceptional user experiences across all devices.
                     </p>
-                    <a href="#">Learn More</a>
+                    <div class="service-features">
+                        <span>Responsive Design</span>
+                        <span>SEO Optimized</span>
+                        <span>Fast Loading</span>
+                    </div>
+                    <a href="#Contact" class="service-btn">Get Started</a>
                 </div>
-                <div>
-                    <i class="fa-sharp fa-solid fa-crop-simple"></i>
-                    <h2>Ux/UI Design</h2>
+                <div class="service-item featured">
+                    <div class="service-icon">
+                        <i class="fa-sharp fa-solid fa-crop-simple"></i>
+                    </div>
+                    <h2>UI/UX Design</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Quisquam quibusdam
-                        accusantium magnam tempore! Quisquam
-                        eius iure consequuntur eaque mollitia
-                        corrupti, odio placeat repellendus,
-                        minus dolore delectus aut iusto dignissimos.
-                        Repellat!
+                        Creating intuitive and visually appealing user interfaces that prioritize 
+                        user experience. From wireframes to final designs, I ensure your product 
+                        is both beautiful and functional.
                     </p>
-                    <a href="#">Learn More</a>
+                    <div class="service-features">
+                        <span>User Research</span>
+                        <span>Prototyping</span>
+                        <span>Visual Design</span>
+                    </div>
+                    <a href="#Contact" class="service-btn">Get Started</a>
                 </div>
-                <div>
-                    <i class="fa-brands fa-app-store-ios"></i>
-                    <h2>App Design</h2>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fa-brands fa-app-store-ios"></i>
+                    </div>
+                    <h2>Mobile App Development</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Quisquam quibusdam
-                        accusantium magnam tempore! Quisquam
-                        eius iure consequuntur eaque mollitia
-                        corrupti, odio placeat repellendus,
-                        minus dolore delectus aut iusto dignissimos.
-                        Repellat!
+                        Cross-platform mobile application development using React Native and Flutter. 
+                        I build apps that work seamlessly on both iOS and Android platforms with 
+                        native performance.
                     </p>
-                    <a href="#">Learn More</a>
+                    <div class="service-features">
+                        <span>Cross-Platform</span>
+                        <span>Native Performance</span>
+                        <span>App Store Ready</span>
+                    </div>
+                    <a href="#Contact" class="service-btn">Get Started</a>
                 </div>
             </div>
         </div>
-
     </div>
-
-    <!--------------  protfolio ------------->
 
     <div id="protfolio">
         <div class="container">
-            <h1 class="sub-title">My Work</h1>
+            <h1 class="sub-title">My Portfolio</h1>
+            <p class="section-subtitle">Recent projects that showcase my skills and creativity</p>
+            
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+            
             <div class="work-list">
-                <div class="work">
-                    <img src="images/work-1.png">
+                <div class="work" data-category="web">
+                    <img src="Images/work-1.png" alt="E-commerce Platform">
                     <div class="layer">
-                        <h3>Socail Medaia App</h3>
+                        <h3>E-commerce Platform</h3>
                         <p>
-                            The app connects you yo the talented people around the world.
-                            Download it from play sotre.
+                            A full-featured e-commerce platform built with React and Node.js, 
+                            featuring user authentication, payment integration, and admin dashboard.
                         </p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" title="Live Demo"><i class="fa-solid fa-external-link"></i></a>
+                            <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="work">
-                    <img src="images/work-2.png">
+                <div class="work" data-category="mobile">
+                    <img src="Images/work-2.png" alt="Music Streaming App">
                     <div class="layer">
-                        <h3>Music App</h3>
+                        <h3>Music Streaming App</h3>
                         <p>
-                            The app connects you yo the talented people around the world.
-                            Download it from play sotre.
+                            A cross-platform music streaming application with playlist management, 
+                            offline downloads, and social sharing features.
                         </p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <div class="project-tech">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                            <span>Stripe</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" title="Live Demo"><i class="fa-solid fa-external-link"></i></a>
+                            <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="work">
-                    <img src="images/work-3.png">
+                <div class="work" data-category="web">
+                    <img src="Images/work-3.png" alt="Task Management System">
                     <div class="layer">
-                        <h3>Online Shoping App</h3>
+                        <h3>Task Management System</h3>
                         <p>
-                            The app connects you yo the talented people around the world.
-                            Download it from play sotre.
+                            A collaborative task management platform with real-time updates, 
+                            team collaboration features, and progress tracking.
                         </p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Express</span>
+                            <span>Socket.io</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" title="Live Demo"><i class="fa-solid fa-external-link"></i></a>
+                            <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                        </div>
                     </div>
                 </div>
-
             </div>
 
-            <a href="#" class="btn">See More</a>
-
+            <div class="portfolio-cta">
+                <p>Interested in seeing more of my work?</p>
+                <a href="https://github.com/Isuru-Eranda" class="btn primary-btn" target="_blank">
+                    <i class="fa-brands fa-github"></i> View All Projects
+                </a>
+            </div>
         </div>
     </div>
-    <!--------------  skills ------------->
-    <div id="skills ">
+    <div id="skills">
         <div class="container">
-            <h1 class="sub-title">Skills</h1>
-            <h3 class="sub-title-2">Programming Skills</h3>
+            <h1 class="sub-title">Technical Skills</h1>
+            <p class="section-subtitle">Technologies and tools I work with</p>
 
+            <div class="skills-categories">
+                <div class="skill-category">
+                    <h3 class="category-title">Frontend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-box">
+                            <div class="skill-icon">
+                                <img src="icon/html-5.png" alt="HTML5">
+                            </div>
+                            <h4>HTML5</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-percentage="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <div class="skill-icon">
+                                <img src="icon/css-3.png" alt="CSS3">
+                            </div>
+                            <h4>CSS3</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-percentage="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <div class="skill-icon">
+                                <img src="icon/js.png" alt="JavaScript">
+                            </div>
+                            <h4>JavaScript</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-percentage="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <div class="skill-icon">
+                                <img src="icon/react-js.png" alt="React">
+                            </div>
+                            <h4>React</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-percentage="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">Backend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-box">
+                            <div class="skill-icon">
+                                <img src="icon/node-js.png" alt="Node.js">
+                            </div>
+                            <h4>Node.js</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-percentage="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <div class="skill-icon">
+                                <img src="icon/python.png" alt="Python">
+                            </div>
+                            <h4>Python</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-percentage="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <div class="skill-icon">
+                                <img src="icon/mongodb.png" alt="MongoDB">
+                            </div>
+                            <h4>MongoDB</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-percentage="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <div class="skill-icon">
+                                <img src="icon/express-js.png" alt="Express.js">
+                            </div>
+                            <h4>Express.js</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-percentage="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">Tools & Others</h3>
+                    <div class="skills-grid">
+                        <div class="skill-box">
+                            <div class="skill-icon">
+                                <img src="icon/git.png" alt="Git">
+                            </div>
+                            <h4>Git</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-percentage="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <div class="skill-icon">
+                                <img src="icon/typescript.png" alt="TypeScript">
+                            </div>
+                            <h4>TypeScript</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-percentage="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <div class="skill-icon">
+                                <img src="icon/c.png" alt="C">
+                            </div>
+                            <h4>C</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-percentage="60"></div>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <div class="skill-icon">
+                                <img src="icon/ui-ux.png" alt="UI/UX">
+                            </div>
+                            <h4>UI/UX</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-percentage="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Contact">
+        <div class="container">
+            <div class="contact-header">
+                <h1 class="sub-title">Get In Touch</h1>
+                <p class="section-subtitle">Ready to work together? Let's create something amazing!</p>
+            </div>
+            
             <div class="row">
-                <div class="skills -col">
-
-                    <div class="skill-box">
-                        <div class="skill-title">
-                            <a href=""><img class="skill-icon" src="icon/html-5.png"></a>
+                <div class="Contact-left">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>isurueranda01@gmail.com</p>
+                            </div>
                         </div>
-                        <h3>HTML</h3>
-                    </div>
-
-                    <div class="skill-box">
-                        <div class="skill-title">
-                            <a href=""><img class="skill-icon" src="icon/css-3.png"></a>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Phone</h3>
+                                <p>+94 78 700 9632</p>
+                            </div>
                         </div>
-                        <h3>CSS</h3>
-                    </div>
-
-                    <div class="skill-box">
-                        <div class="skill-title">
-                            <a href=""><img class="skill-icon" src="icon/python.png"></a>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Location</h3>
+                                <p>Colombo, Sri Lanka</p>
+                            </div>
                         </div>
-                        <h3>PYTHON</h3>
-                    </div>
-
-                    <div class="skill-box">
-                        <div class="skill-title">
-                            <a href=""><img class="skill-icon" src="icon/js.png"></a>
-                        </div>
-                        <h3>JAVASCRIPT</h3>
                     </div>
                     
-                    <div class="skill-box">
-                        <div class="skill-title">
-                            <a href=""><img class="skill-icon" src="icon/c.png"></a>
+                    <div class="social-section">
+                        <h3>Follow Me</h3>
+                        <div class="social-icons">
+                            <a href="https://web.facebook.com/KVPISURUERANDA/" target="_blank" title="Facebook">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="https://twitter.com/isuru__eranda" target="_blank" title="Twitter">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="https://github.com/Isuru-Eranda" target="_blank" title="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/isuru-eranda/" target="_blank" title="LinkedIn">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.instagram.com/isuru__eranda/" target="_blank" title="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
                         </div>
-                        <h3>C</h3>
                     </div>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-    <!--------------  contact ------------->
-
-    <div id="Contact">
-
-        <div class="container">
-
-            <div class="row">
-
-                <div class="Contact-left">
-                    <h1 class="Sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-paper-plane"></i>isurueranda01@gmail.com</p>
-                    <p><i class="fa-solid fa-square-phone"></i>0787009632</p> &nbsp;
-                    <!--
-                    <div class="social-icons">
-                        <a href="https://web.facebook.com/KVPISURUERANDA/"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://twitter.com/isuru__eranda"><i class="fa-brands fa-twitter-square"></i></a>
-                        <a href="https://github.com/Isuru-Eranda"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/isuru-eranda/"><i class="fa-brands fa-linkedin"></i></a>
-                    </div> --->
-                    <a href="images/my-cv.pdf" download class="btn btn2">Download Cv</a>
+                    
+                    <a href="Images/my-cv.pdf" download class="btn primary-btn download-cv">
+                        <i class="fa-solid fa-download"></i> Download CV
+                    </a>
                 </div>
 
                 <div class="Contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="Email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
+                    <form name="submit-to-google-sheet" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="Subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn submit-btn">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message
+                        </button>
                     </form>
-                    <span id="msg"></span>
+                    <span id="msg" class="form-message"></span>
                 </div>
             </div>
-
         </div>
     </div>
 
     <!----------- footer ------------->
     <footer>
-        <div class="container">
             <div class="row">
-
                 <div class="footer-col">
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="#header">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#Services">Services</a></li>
-                        <li><a href="#Services">Skills</a></li>
+                        <li><a href="#skills">Skills</a></li>
                         <li><a href="#protfolio">Portfolio</a></li>
                         <li><a href="#Contact">Contact</a></li>
                     </ul>
@@ -316,23 +595,19 @@
                 </div>
                 <div class="footer-col">
                     <h3>Get in touch</h3>
-                        <div class="social-icons">
+                    <div class="social-icons">
                         <a href="https://web.facebook.com/KVPISURUERANDA/"><i class="fa-brands fa-facebook"></i></a>
                         <a href="https://twitter.com/isuru__eranda"><i class="fa-brands fa-twitter-square"></i></a>
                         <a href="https://github.com/Isuru-Eranda"><i class="fa-brands fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/isuru-eranda/"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/isuru__eranda/"><i class="fa-brands fa-instagram"></i></i></a>
+                        <a href="https://www.instagram.com/isuru__eranda/"><i class="fa-brands fa-instagram"></i></a>
                     </div>
-
                 </div>
-
             </div>
 
-        </div>
-
-        <div class="copyright">
-            <p>Copyright &copy; Isuru Eranda | All Rights Reserved.</p>
-        </div>
+            <div class="copyright">
+                <p>Copyright &copy; Isuru Eranda | All Rights Reserved.</p>
+            </div>
     </footer>
 
  <script src="script.js"></script>
