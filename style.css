@@ -363,6 +363,7 @@ body.dark-mode nav {
     color: var(--text-secondary);
     margin-bottom: 30px;
     line-height: 1.8;
+    text-align: justify;
 }
 
 .cta-buttons {
@@ -379,8 +380,8 @@ body.dark-mode nav {
 
 .profile-image {
     position: relative;
-    width: 350px;
-    height: 350px;
+    width: 450px;
+    height: 450px;
     border-radius: 50%;
     overflow: hidden;
     background: var(--gradient-primary);
@@ -437,6 +438,8 @@ body.dark-mode nav {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow-dark);
+    max-width: 450px;
+    margin: 0 auto;
 }
 
 .about-image img {
@@ -458,6 +461,7 @@ body.dark-mode nav {
     color: var(--text-secondary);
     margin-bottom: 30px;
     line-height: 1.8;
+    text-align: justify;
 }
 
 .stats-grid {
@@ -1104,7 +1108,8 @@ footer {
 }
 
 .footer-col {
-    margin-bottom: 30px;
+    margin: bottom 4px;
+
 }
 
 .footer-col h3 {
@@ -1627,6 +1632,7 @@ nav ul .fa-solid {
         bottom: 20px;
         right: 20px;
         font-size: 16px;
+        background: #dc2626 !important;
     }
     
     #loading-screen .loader-circle {
@@ -1809,7 +1815,7 @@ nav ul .fa-solid {
     right: 30px;
     width: 50px;
     height: 50px;
-    background: var(--gradient-primary);
+    background: #dc2626 !important;
     border: none;
     border-radius: 50%;
     color: white;
