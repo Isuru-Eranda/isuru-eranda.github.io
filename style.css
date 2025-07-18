@@ -1103,19 +1103,47 @@ body.dark-mode nav {
 /* Footer */
 footer {
     background: var(--bg-primary);
-    padding: 60px 10% 20px;
+    padding: 60px 0 20px;
     border-top: 1px solid var(--border-color);
 }
 
-.footer-col {
-    margin: bottom 4px;
+.footer-row {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    align-items: flex-start;
+    display: grid;
+}
 
+/* Apply a consistent height to all footer columns */
+.footer-col {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    min-height: 250px;
 }
 
 .footer-col h3 {
     color: var(--text-primary);
     margin-bottom: 20px;
     font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+    height: 40px; /* Set fixed height for all headers */
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-col h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--primary-color);
 }
 
 .footer-col ul {
@@ -1132,8 +1160,38 @@ footer {
     transition: color 0.3s ease;
 }
 
+.footer-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 .footer-col ul li a:hover {
     color: var(--primary-color);
+}
+
+.contact-info-footer {
+    margin-top: 20px;
+}
+
+.contact-info-footer p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+}
+
+.contact-info-footer p:hover {
+    color: var(--primary-color);
+}
+
+.contact-info-footer i {
+    color: var(--primary-color);
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
 }
 
 .copyright {
@@ -1172,6 +1230,11 @@ nav ul .fa-solid {
         font-size: 3rem;
     }
     
+    .footer-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
     .services-list {
         grid-template-columns: 1fr;
         gap: 25px;
@@ -1206,6 +1269,15 @@ nav ul .fa-solid {
     footer {
         padding-left: 4%;
         padding-right: 4%;
+    }
+    
+    .footer-row {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-col {
+        margin-bottom: 20px;
     }
     
     /* Navigation */
