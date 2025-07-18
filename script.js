@@ -1,12 +1,19 @@
 // Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('nav ul li a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+        
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            // Close mobile menu if open
+            if (window.innerWidth <= 768) {
+                closemenu();
+            }
+            
+            window.scrollTo({
+                top: target.offsetTop - 70, // Offset for fixed navbar
+                behavior: 'smooth'
             });
         }
     });
@@ -23,11 +30,12 @@ window.addEventListener('scroll', () => {
 });
 
 // Active navigation link
-const sections = document.querySelectorAll('section, div[id]');
+const sections = document.querySelectorAll('div[id="header"], div[id="about"], div[id="Services"], div[id="skills"], div[id="protfolio"], div[id="Contact"]');
 const navLinks = document.querySelectorAll('nav ul li a');
 
 window.addEventListener('scroll', () => {
     let current = '';
+    
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
@@ -38,7 +46,8 @@ window.addEventListener('scroll', () => {
 
     navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
+        const href = link.getAttribute('href');
+        if (href === `#${current}`) {
             link.classList.add('active');
         }
     });
@@ -403,6 +412,18 @@ window.addEventListener('load', () => {
             loadingScreen.style.display = 'none';
         }, 500);
     }, 1000);
+    
+    // Add logo link functionality
+    const logoLink = document.getElementById('logo-link');
+    if (logoLink) {
+        logoLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 });
 
 // Scroll to top button functionality
