@@ -56,6 +56,19 @@ body{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 0 10px;
+    }
 }
 
 /* Utility Classes */
@@ -323,6 +336,15 @@ body.dark-mode nav {
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     align-items: center;
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .row {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
 }
 
 .intro-col-1 {
@@ -387,6 +409,29 @@ body.dark-mode nav {
     background: var(--gradient-primary);
     padding: 5px;
     animation: float 6s ease-in-out infinite;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .profile-image {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .profile-image {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .profile-image {
+        width: 220px;
+        height: 220px;
+    }
 }
 
 .profile-image img {
@@ -1108,10 +1153,13 @@ footer {
 }
 
 .footer-row {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     align-items: flex-start;
-    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Apply a consistent height to all footer columns */
@@ -1119,7 +1167,7 @@ footer {
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
-    min-height: 250px;
+    min-height: 200px;
 }
 
 .footer-col h3 {
@@ -1128,7 +1176,7 @@ footer {
     font-weight: 600;
     position: relative;
     padding-bottom: 10px;
-    height: 40px; /* Set fixed height for all headers */
+    height: auto;
     display: flex;
     align-items: center;
     font-size: 18px;
@@ -1148,6 +1196,8 @@ footer {
 
 .footer-col ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-col ul li {
@@ -1158,6 +1208,8 @@ footer {
     color: var(--text-secondary);
     text-decoration: none;
     transition: color 0.3s ease;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
 .footer-content {
@@ -1200,6 +1252,152 @@ footer {
     margin-top: 30px;
     border-top: 1px solid var(--border-color);
     color: var(--text-secondary);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Footer Responsive Styles */
+@media only screen and (max-width: 1024px) {
+    .footer-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        padding: 0 30px;
+    }
+    
+    .footer-col {
+        min-height: 180px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    footer {
+        padding: 50px 0 20px;
+    }
+    
+    .footer-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 0 20px;
+    }
+    
+    .footer-col {
+        min-height: 150px;
+        margin-bottom: 25px;
+    }
+    
+    .footer-col h3 {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    
+    .footer-col ul li a {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    footer {
+        padding: 40px 0 15px;
+    }
+    
+    .footer-row {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 0 15px;
+        text-align: center;
+    }
+    
+    .footer-col {
+        margin-bottom: 20px;
+        min-height: auto;
+        text-align: center;
+    }
+    
+    .footer-col h3 {
+        font-size: 16px;
+        margin-bottom: 15px;
+        justify-content: center;
+    }
+    
+    .footer-col h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-col ul li {
+        margin-bottom: 8px;
+    }
+    
+    .footer-col ul li a {
+        font-size: 14px;
+        display: inline-block;
+        padding: 5px 0;
+    }
+    
+    .copyright {
+        font-size: 13px;
+        padding-top: 20px;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    footer {
+        padding: 35px 0 15px;
+    }
+    
+    .footer-row {
+        padding: 0 10px;
+        gap: 20px;
+    }
+    
+    .footer-col h3 {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+    
+    .footer-col ul li a {
+        font-size: 13px;
+        padding: 4px 0;
+    }
+    
+    .copyright {
+        font-size: 12px;
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 1.5;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    footer {
+        padding: 30px 0 10px;
+    }
+    
+    .footer-row {
+        padding: 0 8px;
+        gap: 15px;
+    }
+    
+    .footer-col h3 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    
+    .footer-col ul li a {
+        font-size: 12px;
+    }
+    
+    .copyright {
+        font-size: 11px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
 }
 
 /*----------- ( Media Query ) ------------*/
@@ -1217,22 +1415,12 @@ nav ul .fa-solid {
         padding-right: 5%;
     }
     
-    footer {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-    
     .sub-title {
         font-size: 45px;
     }
     
     .intro-col-1 h1 {
         font-size: 3rem;
-    }
-    
-    .footer-row {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
     }
     
     .services-list {
@@ -1264,20 +1452,6 @@ nav ul .fa-solid {
     #intro, #about, #Services, #skills, #protfolio, #Contact {
         padding-left: 4%;
         padding-right: 4%;
-    }
-    
-    footer {
-        padding-left: 4%;
-        padding-right: 4%;
-    }
-    
-    .footer-row {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .footer-col {
-        margin-bottom: 20px;
     }
     
     /* Navigation */
@@ -1660,35 +1834,6 @@ nav ul .fa-solid {
         min-height: 100px;
     }
 
-    /* Footer */
-    footer {
-        padding: 40px 4% 15px;
-    }
-    
-    .footer-col {
-        margin-bottom: 25px;
-        text-align: center;
-    }
-    
-    .footer-col h3 {
-        font-size: 1.1rem;
-        margin-bottom: 15px;
-    }
-    
-    .footer-col ul li {
-        margin-bottom: 8px;
-    }
-    
-    .footer-col ul li a {
-        font-size: 14px;
-    }
-    
-    .copyright {
-        font-size: 13px;
-        padding-top: 20px;
-        margin-top: 20px;
-    }
-
     /* Utility adjustments */
     .scroll-indicator {
         bottom: 20px;
@@ -1720,11 +1865,6 @@ nav ul .fa-solid {
 /* Extra Small Mobile Devices */
 @media(max-width:360px){
     #intro, #about, #Services, #skills, #protfolio, #Contact {
-        padding-left: 3%;
-        padding-right: 3%;
-    }
-    
-    footer {
         padding-left: 3%;
         padding-right: 3%;
     }
@@ -2004,10 +2144,83 @@ nav ul .fa-solid {
         min-width: 48px;
         min-height: 48px;
     }
+    
+    /* Prevent accidental zooming on form inputs */
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 16px !important;
+    }
+}
+
+/* Additional responsive improvements */
+@media only screen and (max-width: 480px) {
+    /* Ensure proper viewport scaling */
+    html {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    }
+    
+    /* Improve navigation accessibility */
+    nav ul li a {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    
+    /* Better image handling */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Improve button spacing */
+    .cta-buttons .btn {
+        margin: 8px 0;
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    /* Better form handling */
+    .form-group input,
+    .form-group textarea {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    
+    /* Improve section spacing */
+    .section-subtitle {
+        font-size: 15px;
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+    
+    /* Better portfolio filter */
+    .portfolio-filter {
+        padding: 0 10px;
+    }
+    
+    .filter-btn {
+        font-size: 14px;
+        padding: 10px 16px;
+        margin: 4px;
+    }
+}
+    
+    .social-icons a,
+    .project-links a {
+        min-width: 48px;
+        min-height: 48px;
+    }
 }
 
 /* Improve readability on small screens */
 @media only screen and (max-width: 480px) {
+    /* Ensure proper viewport scaling */
+    html {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    }
+    
     body {
         line-height: 1.5;
     }
@@ -2019,6 +2232,50 @@ nav ul .fa-solid {
     
     h1, h2, h3, h4, h5, h6 {
         line-height: 1.3;
+    }
+    
+    /* Improve navigation accessibility */
+    nav ul li a {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    
+    /* Better image handling */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Improve button spacing */
+    .cta-buttons .btn {
+        margin: 8px 0;
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    /* Better form handling */
+    .form-group input,
+    .form-group textarea {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    
+    /* Improve section spacing */
+    .section-subtitle {
+        font-size: 15px;
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+    
+    /* Better portfolio filter */
+    .portfolio-filter {
+        padding: 0 10px;
+    }
+    
+    .filter-btn {
+        font-size: 14px;
+        padding: 10px 16px;
+        margin: 4px;
     }
 }
 

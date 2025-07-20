@@ -1,22 +1,6 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('nav ul li a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const target = document.querySelector(targetId);
-        
-        if (target) {
-            // Close mobile menu if open
-            if (window.innerWidth <= 768) {
-                closemenu();
-            }
-            
-            window.scrollTo({
-                top: target.offsetTop - 70, // Offset for fixed navbar
-                behavior: 'smooth'
-            });
-        }
-    });
+// Smooth scrolling for navigation links - Initial setup
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', handleNavClick);
 });
 
 // Navbar scroll effect
@@ -30,19 +14,27 @@ window.addEventListener('scroll', () => {
 });
 
 // Active navigation link
-const sections = document.querySelectorAll('div[id="header"], div[id="about"], div[id="Services"], div[id="skills"], div[id="protfolio"], div[id="Contact"]');
+const sections = document.querySelectorAll('#header, #intro, #about, #Services, #skills, #protfolio, #Contact');
 const navLinks = document.querySelectorAll('nav ul li a');
 
 window.addEventListener('scroll', () => {
     let current = '';
+    const scrollPos = window.scrollY + 100; // Add offset for better detection
     
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (window.scrollY >= (sectionTop - 200)) {
-            current = section.getAttribute('id');
+        const sectionId = section.getAttribute('id');
+        
+        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+            current = sectionId;
         }
     });
+    
+    // Special case: if we're at the top or in intro section, highlight HOME
+    if (window.scrollY < 100 || current === 'intro') {
+        current = 'header';
+    }
 
     navLinks.forEach(link => {
         link.classList.remove('active');
@@ -64,6 +56,63 @@ function typeWriter(element, text, speed = 100) {
         }
     }
     type();
+}
+
+// Initialize navigation when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    // Set initial active link
+    const homeLink = document.querySelector('nav ul li a[href="#header"]');
+    if (homeLink) {
+        homeLink.classList.add('active');
+    }
+    
+    // Test all navigation links
+    console.log('Navigation links found:', document.querySelectorAll('nav ul li a').length);
+    console.log('Sections found:', document.querySelectorAll('#header, #intro, #about, #Services, #skills, #protfolio, #Contact').length);
+    
+    // Re-attach event listeners to ensure they work
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        // Remove any existing listeners
+        anchor.removeEventListener('click', handleNavClick);
+        // Add the new listener
+        anchor.addEventListener('click', handleNavClick);
+    });
+});
+
+// Navigation click handler function
+function handleNavClick(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    let target = document.querySelector(targetId);
+    
+    // Special case: if clicking on #header, scroll to #intro instead (the actual content)
+    if (targetId === '#header') {
+        target = document.querySelector('#intro') || document.querySelector('#header');
+    }
+    
+    if (target) {
+        // Close mobile menu if open
+        const sidemenu = document.getElementById('sidemenu');
+        if (sidemenu && window.innerWidth <= 768) {
+            sidemenu.style.right = '-200px';
+        }
+        
+        // Calculate the offset for the fixed navbar
+        const nav = document.querySelector('nav');
+        const navHeight = nav ? nav.offsetHeight : 80;
+        const targetPosition = target.offsetTop - navHeight - 10;
+        
+        window.scrollTo({
+            top: Math.max(0, targetPosition),
+            behavior: 'smooth'
+        });
+        
+        // Update active link immediately
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.classList.remove('active');
+        });
+        this.classList.add('active');
+    }
 }
 
 // Initialize typing animation when page loads
@@ -422,8 +471,27 @@ window.addEventListener('load', () => {
                 top: 0,
                 behavior: 'smooth'
             });
+            
+            // Update active link
+            document.querySelectorAll('nav ul li a').forEach(link => {
+                link.classList.remove('active');
+            });
+            const homeLink = document.querySelector('nav ul li a[href="#header"]');
+            if (homeLink) {
+                homeLink.classList.add('active');
+            }
         });
     }
+    
+    // Double-check navigation is working after page loads
+    setTimeout(() => {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            if (!anchor.onclick && !anchor.getAttribute('data-nav-attached')) {
+                anchor.addEventListener('click', handleNavClick);
+                anchor.setAttribute('data-nav-attached', 'true');
+            }
+        });
+    }, 500);
 });
 
 // Scroll to top button functionality
