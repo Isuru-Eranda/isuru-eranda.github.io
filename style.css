@@ -1218,8 +1218,20 @@ body.dark-mode nav {
 .category-title {
     font-size: 1.8rem;
     color: var(--primary-color);
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     font-weight: 600;
+}
+
+/* Add creative descriptions for skill categories */
+.category-description {
+    color: var(--text-secondary);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
 }
 
 .skills-grid {
@@ -1272,39 +1284,201 @@ body.dark-mode nav {
     justify-content: center;
     position: relative;
     z-index: 1;
+    text-decoration: none !important;
+    border: none !important;
+    overflow: hidden;
 }
 
 .skill-icon img {
     width: 40px;
     height: 40px;
     object-fit: contain;
+    text-decoration: none !important;
+    border: none !important;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
-.skill-box h4 {
-    font-size: 1.1rem;
-    color: var(--text-primary);
+/* Loading state for images */
+.skill-icon img[src=""] {
+    display: none;
+}
+
+.skill-icon img:not([src]) {
+    display: none;
+}
+
+/* Fallback when image fails to load */
+.skill-icon::before {
+    content: '⚡';
+    font-size: 24px;
+    color: var(--primary-color);
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.skill-icon img[src=""]:after,
+.skill-icon:has(img[src=""]):before {
+    opacity: 1;
+}
+
+/* Ensure images are visible when loaded */
+.skill-icon img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.skill-box:hover .skill-icon img {
+    transform: scale(1.1);
+    filter: drop-shadow(0 4px 8px rgba(220, 38, 38, 0.2));
+}
+
+/* Dark mode image adjustments */
+body.dark-mode .skill-icon img {
+    filter: brightness(0.9) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+body.dark-mode .skill-box:hover .skill-icon img {
+    filter: brightness(1) drop-shadow(0 4px 8px rgba(220, 38, 38, 0.3));
+}
+
+.skills-categories {
+    display: grid;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.skill-category {
+    text-align: center;
+}
+
+.category-title {
+    font-size: 1.8rem;
+    color: var(--primary-color);
     margin-bottom: 15px;
     font-weight: 600;
-    position: relative;
-    z-index: 1;
 }
 
-.skill-progress {
-    width: 100%;
-    height: 6px;
-    background: var(--bg-secondary);
-    border-radius: 3px;
+/* Add creative descriptions for skill categories */
+.category-description {
+    color: var(--text-secondary);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.skill-box {
+    background: var(--bg-card);
+    padding: 30px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
     overflow: hidden;
-    position: relative;
-    z-index: 1;
 }
 
-.progress-bar {
+.skill-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
     height: 100%;
     background: var(--gradient-primary);
-    border-radius: 3px;
-    width: 0;
-    transition: width 1.5s ease-in-out;
+    opacity: 0.05;
+    transition: left 0.5s ease;
+}
+
+.skill-box:hover::before {
+    left: 0;
+}
+
+.skill-box:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-light);
+}
+
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+    background: var(--bg-secondary);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    text-decoration: none !important;
+    border: none !important;
+    overflow: hidden;
+}
+
+.skill-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    text-decoration: none !important;
+    border: none !important;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Loading state for images */
+.skill-icon img[src=""] {
+    display: none;
+}
+
+.skill-icon img:not([src]) {
+    display: none;
+}
+
+/* Fallback when image fails to load */
+.skill-icon::before {
+    content: '⚡';
+    font-size: 24px;
+    color: var(--primary-color);
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.skill-icon img[src=""]:after,
+.skill-icon:has(img[src=""]):before {
+    opacity: 1;
+}
+
+/* Ensure images are visible when loaded */
+.skill-icon img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.skill-box:hover .skill-icon img {
+    transform: scale(1.1);
+    filter: drop-shadow(0 4px 8px rgba(220, 38, 38, 0.2));
+}
+
+/* Dark mode image adjustments */
+body.dark-mode .skill-icon img {
+    filter: brightness(0.9) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+body.dark-mode .skill-box:hover .skill-icon img {
+    filter: brightness(1) drop-shadow(0 4px 8px rgba(220, 38, 38, 0.3));
 }
 
 /* Contact Section */
@@ -2032,11 +2206,14 @@ footer {
         width: 50px;
         height: 50px;
         margin-bottom: 12px;
+        text-decoration: none !important;
+        border: none !important;
     }
     
     .skill-icon img {
         width: 30px;
         height: 30px;
+        text-decoration: none !important;
     }
     
     .skill-box h4 {
@@ -2687,29 +2864,31 @@ body.dark-mode .hamburger-line {
     background: var(--text-primary);
 }
 
-/* Add this at the end of your CSS file to ensure mobile menu works */
-
-/* Force mobile menu toggle visibility */
+/* Add this at the very end of your CSS file to ensure mobile menu works */
 @media screen and (max-width: 768px) {
     .mobile-menu-toggle {
         display: flex !important;
         visibility: visible !important;
         opacity: 1 !important;
+        z-index: 1001 !important;
     }
     
     .nav-menu {
         display: none !important;
     }
+    
+    .mobile-menu,
+    .mobile-menu-overlay {
+        display: block !important;
+    }
 }
 
-/* Additional mobile menu debugging styles */
-.mobile-menu-toggle {
-    border: 2px solid #dc2626 !important;
-    background: rgba(220, 38, 38, 0.1) !important;
-}
-
+/* Ensure the hamburger icon is visible */
 .mobile-menu-toggle .hamburger-line {
-    background: #dc2626 !important;
+    background: var(--text-primary) !important;
+    width: 20px !important;
+    height: 3px !important;
+    display: block !important;
 }
 
 /* Print styles */
@@ -2738,5 +2917,47 @@ body.dark-mode .hamburger-line {
         page-break-inside: avoid;
         padding: 20pt 0;
     }
+}
+
+/* Enhanced fallback styling for JavaScript-generated skill icon fallbacks */
+.skill-icon.fallback {
+    background: linear-gradient(135deg, var(--primary-color), var(--bg-secondary));
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-icon.fallback::before {
+    content: attr(data-skill-name);
+    opacity: 1;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Hide img when fallback is active */
+.skill-icon.fallback img {
+    display: none !important;
+}
+
+/* Enhanced hover effects for fallback icons */
+.skill-icon.fallback:hover {
+    background: linear-gradient(135deg, var(--bg-secondary), var(--primary-color));
+    transform: scale(1.05);
+}
+
+/* Image loading success state */
+.skill-icon img.loaded {
+    display: block !important;
+    opacity: 1;
+}
+
+/* Image loading error state */
+.skill-icon img.error {
+    display: none !important;
 }
 
