@@ -1,9 +1,15 @@
 // Complete JavaScript for Isuru Eranda Portfolio
+// ================================================================
+// Author: Isuru Eranda
+// Version: 2.0
+// Description: Interactive portfolio functionality with mobile menu,
+//              theme toggle, navigation, and enhanced image loading
+// ================================================================
 
-// Global Variables
+// ============== GLOBAL VARIABLES ==============
 let mobileMenuOpen = false;
 
-// Mobile Menu Functions
+// ============== MOBILE MENU FUNCTIONS ==============
 function openMobileMenu() {
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileOverlay = document.getElementById('mobile-menu-overlay');
@@ -34,6 +40,7 @@ function closeMobileMenu() {
     }
 }
 
+// ============== NAVIGATION FUNCTIONS ==============
 // Navigation Click Handler
 function handleNavClick(e) {
     e.preventDefault();
@@ -66,6 +73,7 @@ function handleNavClick(e) {
     }
 }
 
+// ============== UI COMPONENTS ==============
 // Tab System for About Section
 function opentab(tabname) {
     var tablinks = document.getElementsByClassName("tab-links");
