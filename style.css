@@ -991,7 +991,7 @@ body.dark-mode nav {
 
 /* About Section */
 #about {
-    padding: 100px 10% 100px;
+    padding: 60px 10% 60px;
     background: var(--bg-secondary);
 }
 
@@ -1000,8 +1000,12 @@ body.dark-mode nav {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow-dark);
-    max-width: 450px;
+    max-width: 490px;
     margin: 0 auto;
+    border: 4px solid transparent;
+    background: linear-gradient(var(--bg-primary), var(--bg-primary)) padding-box,
+                var(--gradient-primary) border-box;
+    transition: all 0.3s ease;
 }
 
 .about-image img {
@@ -1012,6 +1016,12 @@ body.dark-mode nav {
 
 .about-image:hover img {
     transform: scale(1.05);
+}
+
+.about-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(220, 38, 38, 0.3);
+    border-width: 5px;
 }
 
 .about-col-2 {
@@ -1472,7 +1482,7 @@ body.dark-mode nav {
 
 .skill-box:hover {
     transform: translateY(-10px);
-    border-color: var(--primary-color);
+    border-color: var(--border-color);
     box-shadow: var(--shadow-light);
 }
 
@@ -1534,7 +1544,7 @@ body.dark-mode nav {
 
 .skill-box:hover .skill-icon img {
     transform: scale(1.1);
-    filter: drop-shadow(0 4px 8px rgba(220, 38, 38, 0.2));
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
 /* Skill Level Indicators */
@@ -1566,7 +1576,7 @@ body.dark-mode nav {
     top: 0;
     left: 0;
     height: 100%;
-    background: var(--gradient-primary);
+    background: var(--border-color);
     border-radius: 2px;
     transition: width 0.8s ease;
 }
@@ -1594,7 +1604,7 @@ body.dark-mode .skill-icon img {
 }
 
 body.dark-mode .skill-box:hover .skill-icon img {
-    filter: brightness(1) drop-shadow(0 4px 8px rgba(220, 38, 38, 0.3));
+    filter: brightness(1) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 
 .skills-categories {
@@ -2017,6 +2027,11 @@ footer {
         padding-right: 5%;
     }
     
+    #about {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    
     .sub-title {
         font-size: 45px;
     }
@@ -2054,6 +2069,11 @@ footer {
     #intro, #about, #Services, #skills, #protfolio, #Contact {
         padding-left: 4%;
         padding-right: 4%;
+    }
+    
+    #about {
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
     
     /* Navigation */
@@ -2663,7 +2683,7 @@ footer {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--bg-secondary);
+    background: #f3f4f6;
 }
 
 ::-webkit-scrollbar-thumb {
