@@ -220,7 +220,7 @@ nav.scrolled {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 0;
     margin: 0;
     padding: 0;
 }
@@ -231,7 +231,7 @@ nav.scrolled {
     text-decoration: none;
     font-weight: 500;
     font-size: 16px;
-    padding: 8px 16px;
+    padding: 8px 5px;
     border-radius: 25px;
     transition: all 0.3s ease;
     position: relative;
@@ -321,6 +321,15 @@ nav.scrolled {
     margin: 2px 0;
     transition: all 0.3s ease;
     border-radius: 2px;
+    display: block;
+}
+
+/* Ensure hamburger lines are visible */
+@media (max-width: 768px) {
+    .hamburger-line {
+        background: var(--text-primary) !important;
+        opacity: 1 !important;
+    }
 }
 
 .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
@@ -375,6 +384,12 @@ nav.scrolled {
 
 .mobile-menu.active {
     right: 0;
+}
+
+/* Ensure mobile menu items are visible */
+.mobile-nav-link span {
+    font-weight: 500;
+    font-size: 16px;
 }
 
 .mobile-menu-header {
@@ -490,6 +505,14 @@ nav.scrolled {
     color: var(--primary-color);
 }
 
+/* Ensure mobile nav text is visible */
+.mobile-nav-link span {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--text-primary);
+}
+
 .mobile-menu-footer {
     padding: 20px 25px;
     border-top: 1px solid var(--border-color);
@@ -588,7 +611,7 @@ body.dark-mode nav {
     
     .mobile-menu,
     .mobile-menu-overlay {
-        display: block;
+        display: block !important;
     }
     
     /* Ensure navigation fits on smaller screens */
@@ -645,6 +668,13 @@ body.dark-mode nav {
     align-items: center;
 }
 
+@media only screen and (max-width: 768px) {
+    #intro {
+        padding: 100px 5% 60px;
+        text-align: center;
+    }
+}
+
 .row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -659,10 +689,51 @@ body.dark-mode nav {
         gap: 30px;
         text-align: center;
     }
+    
+    .intro-col-1 {
+        padding-right: 0;
+        text-align: center;
+        order: 2;
+    }
+    
+    .intro-col-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        order: 1;
+        margin-bottom: 20px;
+    }
 }
 
 .intro-col-1 {
     padding-right: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .intro-col-1 {
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .intro-col-1 h1 {
+        font-size: 3rem;
+    }
+    
+    .typing-text {
+        font-size: 1.2rem;
+    }
+    
+    .description {
+        text-align: center;
+        font-size: 16px;
+    }
+    
+    .cta-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 
 .greeting {
@@ -731,6 +802,8 @@ body.dark-mode nav {
     .profile-image {
         width: 350px;
         height: 350px;
+        margin: 0 auto;
+        display: block;
     }
 }
 
@@ -738,6 +811,43 @@ body.dark-mode nav {
     .profile-image {
         width: 280px;
         height: 280px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .intro-col-1 h1 {
+        font-size: 2.5rem;
+    }
+    
+    .typing-text {
+        font-size: 1.1rem;
+    }
+    
+    .greeting {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #intro {
+        padding: 80px 5% 40px;
+    }
+    
+    .row {
+        gap: 20px;
+    }
+    
+    .intro-col-1 h1 {
+        font-size: 2.2rem;
+        line-height: 1.1;
+    }
+    
+    .typing-text {
+        font-size: 1rem;
+    }
+    
+    .description {
+        font-size: 14px;
     }
 }
 
@@ -745,6 +855,31 @@ body.dark-mode nav {
     .profile-image {
         width: 220px;
         height: 220px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .intro-col-1 h1 {
+        font-size: 2rem;
+    }
+    
+    .typing-text {
+        font-size: 0.9rem;
+    }
+    
+    .greeting {
+        font-size: 14px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .btn {
+        width: 200px;
+        justify-content: center;
     }
 }
 
