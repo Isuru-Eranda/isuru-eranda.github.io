@@ -86,6 +86,87 @@ function handleNavClick(e) {
             link.classList.remove('active');
         });
         this.classList.add('active');
+        
+        // Update progress bar
+        updateNavProgressBar(targetId);
+    }
+}
+
+// ============== NAVIGATION PROGRESS BAR ==============
+function updateNavProgressBar(targetId) {
+    const progressFill = document.getElementById('nav-progress-fill');
+    let progressPercentage = 0;
+    
+    // Define progress percentages for each section
+    switch(targetId) {
+        case '#header':
+            progressPercentage = 0;
+            break;
+        case '#about':
+            progressPercentage = 20;
+            break;
+        case '#Services':
+            progressPercentage = 40;
+            break;
+        case '#skills':
+            progressPercentage = 60;
+            break;
+        case '#protfolio':
+            progressPercentage = 80;
+            break;
+        case '#Contact':
+            progressPercentage = 100;
+            break;
+        default:
+            progressPercentage = 0;
+    }
+    
+    if (progressFill) {
+        progressFill.style.width = progressPercentage + '%';
+    }
+}
+
+function updateProgressBarOnScroll() {
+    const sections = [
+        { id: 'header', element: document.querySelector('#intro') || document.querySelector('#header'), progress: 0 },
+        { id: 'about', element: document.querySelector('#about'), progress: 20 },
+        { id: 'Services', element: document.querySelector('#Services'), progress: 40 },
+        { id: 'skills', element: document.querySelector('#skills'), progress: 60 },
+        { id: 'protfolio', element: document.querySelector('#protfolio'), progress: 80 },
+        { id: 'Contact', element: document.querySelector('#Contact'), progress: 100 }
+    ];
+    
+    const scrollPosition = window.pageYOffset + window.innerHeight / 2;
+    const progressFill = document.getElementById('nav-progress-fill');
+    
+    let currentSection = sections[0];
+    
+    for (let i = 0; i < sections.length; i++) {
+        if (sections[i].element && scrollPosition >= sections[i].element.offsetTop) {
+            currentSection = sections[i];
+        }
+    }
+    
+    if (progressFill) {
+        progressFill.style.width = currentSection.progress + '%';
+    }
+    
+    // Update active nav link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + currentSection.id) {
+            link.classList.add('active');
+        }
+    });
+}
+
+function updateProgressBarPosition() {
+    const nav = document.querySelector('nav');
+    const progressBar = document.querySelector('.nav-progress-bar');
+    
+    if (nav && progressBar) {
+        const navHeight = nav.offsetHeight;
+        progressBar.style.top = navHeight + 'px';
     }
 }
 
@@ -384,6 +465,12 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 scrollTopBtn.classList.remove('show');
             }
+            
+            // Update progress bar based on scroll position
+            updateProgressBarOnScroll();
+            
+            // Update progress bar position based on nav height
+            updateProgressBarPosition();
         });
     }
     
@@ -417,6 +504,9 @@ document.addEventListener('DOMContentLoaded', function() {
     homeLinks.forEach(link => {
         link.classList.add('active');
     });
+    
+    // Set initial progress bar position
+    updateProgressBarPosition();
     
     console.log('Portfolio initialized successfully');
 });

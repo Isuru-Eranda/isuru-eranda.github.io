@@ -173,6 +173,32 @@ nav.scrolled {
     box-shadow: 0 4px 20px rgba(220, 38, 38, 0.15);
 }
 
+/* Navigation Progress Bar */
+.nav-progress-bar {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(220, 38, 38, 0.1);
+    z-index: 999;
+    border-bottom: 1px solid var(--border-color);
+    transition: top 0.3s ease;
+}
+
+.nav-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #dc2626, #ef4444);
+    transition: width 0.5s ease;
+    border-radius: 0 2px 2px 0;
+}
+
+/* Reset navigation to normal position */
+nav {
+    top: 0;
+}
+
 /* Navigation Brand */
 .nav-brand {
     display: flex;
@@ -518,6 +544,15 @@ body.dark-mode .theme-toggle {
 body.dark-mode nav {
     background: rgba(17, 24, 39, 0.95);
     border-bottom: 1px solid var(--border-color);
+}
+
+/* Dark mode progress bar */
+body.dark-mode .nav-progress-bar {
+    background: rgba(17, 24, 39, 0.3);
+}
+
+body.dark-mode .nav-progress-fill {
+    background: linear-gradient(90deg, #dc2626, #ef4444);
 }
 
 /* Fix dark mode nav on mobile */
@@ -991,7 +1026,7 @@ body.dark-mode nav {
 
 /* About Section */
 #about {
-    padding: 60px 10% 60px;
+    padding: 60px  60px;
     background: var(--bg-secondary);
 }
 
@@ -1001,17 +1036,21 @@ body.dark-mode nav {
     overflow: hidden;
     box-shadow: var(--shadow-dark);
     max-width: 490px;
+    height: 600px;
     margin: 0 auto;
     border: 4px solid transparent;
     background: linear-gradient(var(--bg-primary), var(--bg-primary)) padding-box,
                 var(--gradient-primary) border-box;
     transition: all 0.3s ease;
+    
 }
 
 .about-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.3s ease;
+    
 }
 
 .about-image:hover img {
@@ -1025,7 +1064,8 @@ body.dark-mode nav {
 }
 
 .about-col-2 {
-    padding-left: 40px;
+    padding-right: 40px;
+    
 }
 
 .about-description {
@@ -2201,6 +2241,11 @@ footer {
     .about-col-2{
         padding-left: 0;
         margin-top: 30px;
+    }
+    
+    .about-image {
+        height: 400px;
+        max-width: 100%;
     }
     
     .about-description {
