@@ -420,9 +420,51 @@ document.addEventListener('DOMContentLoaded', function() {
         console.warn('Mobile overlay not found');
     }
     
-    // Navigation Links
+    // Navigation Links (both desktop and mobile)
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', handleNavClick);
+    });
+    
+    // Mobile Navigation Links
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            let target = document.querySelector(targetId);
+            
+            if (targetId === '#header') {
+                target = document.querySelector('#intro') || document.querySelector('#header');
+            }
+            
+            if (target) {
+                // Close mobile menu first
+                closeMobileMenu();
+                
+                // Wait for menu to close, then scroll
+                setTimeout(() => {
+                    const nav = document.querySelector('nav');
+                    const navHeight = nav ? nav.offsetHeight : 80;
+                    const targetPosition = target.offsetTop - navHeight - 10;
+                    
+                    window.scrollTo({
+                        top: Math.max(0, targetPosition),
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update active states for both desktop and mobile
+                    document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(navLink => {
+                        navLink.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    
+                    // Also update desktop nav if same href exists
+                    const desktopLink = document.querySelector(`.nav-menu a[href="${targetId}"]`);
+                    if (desktopLink) {
+                        desktopLink.classList.add('active');
+                    }
+                }, 200);
+            }
+        });
     });
     
     // Theme Toggle
